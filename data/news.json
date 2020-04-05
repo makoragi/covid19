@@ -1,6 +1,12 @@
 {
     "newsItems": [
         {
+            "date": "2020\/04\/05",
+            "text": "データは随時更新中です。ただし手動のため更新タイミングは不定です。"
+        }
+    ],
+    "oldNewsItems": [
+        {
             "date": "2020\/03\/18",
             "url": "https://www.pref.kumamoto.jp/common/UploadFileOutput.ashx?c_id=3&id=30386&sub_id=67&flid=226255",
             "text": "感染症対応フローを3/16版へ更新しました。"
