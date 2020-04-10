@@ -13,9 +13,7 @@
           <img src="/logo.png" :alt="$t('熊本県')" />
         </div>
         <h1 class="SideNavigation-Heading">
-          {{ $t('【非公式】新型コロナウイルス感染症') }}<br />{{
-            $t('対策サイト')
-          }}
+          {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策サイト') }}
         </h1>
       </nuxt-link>
     </header>
