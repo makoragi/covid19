@@ -12,8 +12,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate:
-      '%s | 熊本県【非公式】新型コロナウイルス感染症対策サイト(dev)',
+    titleTemplate: '%s | 熊本県新型コロナウイルス感染症対策サイト(dev)',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,7 +25,7 @@ const config: Configuration = {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '熊本県【非公式】新型コロナウイルス感染症対策サイト(dev)'
+        content: '熊本県新型コロナウイルス感染症対策サイト(dev)'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -37,7 +36,7 @@ const config: Configuration = {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '熊本県【非公式】新型コロナウイルス感染症対策サイト(dev)'
+        content: '熊本県新型コロナウイルス感染症対策サイト(dev)'
       },
       {
         hid: 'og:description',
@@ -208,7 +207,7 @@ const config: Configuration = {
     hardSource: process.env.NODE_ENV === 'development'
   },
   manifest: {
-    name: '熊本県【非公式】新型コロナウイルス感染症対策サイト',
+    name: '熊本県新型コロナウイルス感染症対策サイト',
     theme_color: '#00a040',
     background_color: '#ffffff',
     display: 'standalone',
