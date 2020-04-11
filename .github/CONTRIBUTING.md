@@ -1,8 +1,10 @@
 # 貢献の仕方
 
+[本家の情報はこちら](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/CONTRIBUTING.md)
+
 コントリビューターの皆様、本プロジェクトにご参加いただきありがとうございます！！
 
-開発責任者をしています、関です。何か質問があれば、Slack 等でお気軽に質問してください！
+開発責任者をしています、[Makoto Sakuragi](https://www.facebook.com/makoragi/)です。また運営は [Code for Kumamoto](https://www.facebook.com/groups/CodeForKumamoto/)というシビックテックコミュニティで行っております。こちらでディスカッションできるので、是非Facebookグループに入ってください。
 
 本サイトの開発に参加してくださる方に対して、参加方法をお伝えします。
 
@@ -14,8 +16,11 @@
 * good first issue / help wanted / bug を優先して対応いただけると助かります
 
 ## コミュニケーションへの参加方法
+<!--
 * ~~Code for Japan の Slack アカウントを持っていない場合、[こちらから登録](https://cfjslackin.herokuapp.com/)してください~~
 * ~~`#covid19` チャンネルにご参加ください。~~
+-->
+* [Code for KyushuのSlack](https://codeforkyushu.slack.com) か、[Code for KumamotoのFacebookグループ](https://www.facebook.com/groups/CodeForKumamoto/) に参加してください。
 
 ## 参加にあたって
 * 開発に参加する前に、[Principle/行動規範](CODE_OF_CONDUCT.md) をご一読ください。
@@ -30,18 +35,16 @@
 ## 参考情報
 * [東京都 新型コロナウイルス対策サイトへの貢献方法を解説(Qiita)](https://qiita.com/FPC_COMMUNITY/items/b9cc072813dc2231b2b2)
 
-<!--
 ## CONTRIBUTORS.md への追加について
-ご協力いただいた皆様のお名前（ハンドルネーム）や役割を記す、[CONTRIBUTORS.md](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/CONTRIBUTORS.md) というファイルがあります。
+ご協力いただいた皆様のお名前（ハンドルネーム）や役割を記す、[CONTRIBUTORS.md](https://github.com/codeforkumamoto/covid19/blob/development/CONTRIBUTORS.md) というファイルがあります。
 何かしらの貢献を行った方は、ぜひこちらにもお名前をお載せください。
-[#654](https://github.com/tokyo-metropolitan-gov/covid19/issues/654) の Issue に、掲載名、リンク先（あれば）、役割をコメントください。
-^^>
+[#151](https://github.com/codeforkumamoto/covid19/issues/151) の Issue に、掲載名、リンク先（あれば）、役割をコメントください。
 
 ## 開発に関する情報
 * 開発サイト https://dev-covid19-kumamoto.netlify.com/
-<!--
 * ステージングサイト https://stg-covid19-kumamoto.netlify.com/
-* 本番サイト https://stopcovid19.metro.tokyo.lg.jp/
+* 本番サイト https://kumamoto.stopcovid19.jp/
+<!--
 * [デザイン](https://www.figma.com/file/V7vt80p2gauhdgTZeVNbgj/UI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3?node-id=121%3A156)
 * [翻訳スプレッドシート](https://docs.google.com/spreadsheets/d/1avT6QGInyQseYjoc_TxL8RPZfutyvrv4BtJkXfk1Nko)
 -->
