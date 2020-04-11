@@ -2,7 +2,7 @@
 
 ![](https://github.com/codeforkumamoto/covid19/workflows/production%20deploy/badge.svg)
 
-[![熊本県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/5866690/76852713-42e2e700-688f-11ea-90f4-b8d06971e01a.png)](https://dev-covid19-kumamoto.netlify.com/)
+[![熊本県 新型コロナウイルス感染症対策サイト](https://user-images.githubusercontent.com/5866690/79036251-66d0e880-7c01-11ea-87bc-d4d0ecd750f3.png)](https://dev-covid19-kumamoto.netlify.com/)
 <!--
 ### 日本語 | [English](./README_EN.md) | [Spanish](./README_ES.md) | [Korean](./README_KO.md) | [Chinese (Taiwan)](./README_ZH_TW.md) | [Chinese (Simplified)](./README_ZH_CN.md) | [Vietnamese](./README_VI.md)
 -->
@@ -15,16 +15,17 @@ Issues にあるいろいろな修正にご協力いただけると嬉しいで�
 
 詳しくは[貢献の仕方](./.github/CONTRIBUTING.md)を御覧ください。
 
-
 ## 行動原則
-詳しくは[サイト構築にあたっての行動原則](./.github/CODE_OF_CONDUCT.md)を御覧ください。
+
+詳しくは[サイト構築にあたっての行動原則(本家リポジトリ)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/CODE_OF_CONDUCT.md)を御覧ください。
 
 ## ライセンス
+
 本ソフトウェアは、[MITライセンス](./LICENSE.txt)の元提供されています。
 
 ## 本家東京サイトから派生したサイト
 
-[Link先](./forkedSites.md)を御覧ください。
+[Link先(本家リポジトリ)](https://github.com/tokyo-metropolitan-gov/covid19/blob/development/FORKED_SITES.md)を御覧ください。
 
 ## 開発者向け情報
 
@@ -66,7 +67,7 @@ $ docker-compose run --rm app yarn install
 
 ### ステージング・本番環境への反映
 
-`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://stop-covid19-kumamoto.netlify.com/ が更新されます。[![Netlify Status](https://api.netlify.com/api/v1/badges/5c668027-b024-4369-892a-de25f52a5f51/deploy-status)](https://app.netlify.com/sites/stop-covid19-kumamoto/deploys)
+`master` ブランチがアップデートされると、自動的に `production` ブランチにHTML類がbuildされます。そして、本番サイト https://kumamoto.stopcovid19.jp/ が更新されます。[![Netlify Status](https://api.netlify.com/api/v1/badges/5c668027-b024-4369-892a-de25f52a5f51/deploy-status)](https://app.netlify.com/sites/stop-covid19-kumamoto/deploys)
 
 `staging` ブランチがアップデートされると、自動的に `gh-pages` ブランチにHTML類がbuildされます。そして、ステージングサイト https://stg-covid19-kumamoto.netlify.com/ が更新されます。[![Netlify Status](https://api.netlify.com/api/v1/badges/a2898428-a455-49c9-88a3-53b44a4eeab0/deploy-status)](https://app.netlify.com/sites/stg-covid19-kumamoto/deploys)
 
