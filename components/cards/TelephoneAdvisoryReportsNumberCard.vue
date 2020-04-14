@@ -7,7 +7,7 @@
       :chart-data="contactsGraph"
       :date="Data.contacts.date"
       :unit="$t('件.reports')"
-      :url="''"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
     />
     <!-- 件.reports = 窓口相談件数 -->
   </v-col>

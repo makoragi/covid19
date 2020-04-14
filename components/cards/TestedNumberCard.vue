@@ -9,6 +9,7 @@
       :items="inspectionsItems"
       :labels="inspectionsLabels"
       :unit="$t('件.tested')"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
     />
     <!-- 件.tested = 検査数 -->
   </v-col>
