@@ -7,7 +7,7 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="''"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
     />
   </v-col>
 </template>
