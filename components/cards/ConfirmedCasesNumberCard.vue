@@ -7,6 +7,7 @@
       :chart-data="patientsGraph"
       :date="Data.patients.date"
       :unit="$t('人')"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
     />
   </v-col>
 </template>
