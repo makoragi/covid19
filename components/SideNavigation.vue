@@ -171,8 +171,11 @@ export default {
           divider: true
         },
         {
-          title: this.$t('※当サイトは熊本県内の有志が開設したものです'),
-          divider: true
+          title: this.$t('※当サイトは熊本県内の有志が開設したものです')
+        },
+        {
+          title: this.$t('他地域の対策サイト(政府CIOポータル)'),
+          link: 'https://cio.go.jp/node/2581'
         }
       ]
     },

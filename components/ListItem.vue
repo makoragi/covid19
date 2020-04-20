@@ -29,7 +29,7 @@
     </v-list-item-action>
     <v-list-item-content class="ListItem-TextContainer">
       <v-list-item-title
-        :class="['ListItem-Text', isActive(link)]"
+        :class="['ListItem-Text', isActive(link), isCioLink(link)]"
         v-text="title"
       />
     </v-list-item-content>
@@ -80,6 +80,12 @@ export default class ListItem extends Vue {
   isActive(link: string): string | undefined {
     if (link === this.$route.path || `${link}/` === this.$route.path) {
       return 'isActive'
+    }
+  }
+
+  isCioLink(link: string): string | undefined {
+    if (link === 'https://cio.go.jp/node/2581') {
+      return 'isCioLink'
     }
   }
 
@@ -175,5 +181,8 @@ svg.isActive {
   > path:not(:first-of-type) {
     fill: $green-1;
   }
+}
+.isCioLink {
+  font-weight: bold !important;
 }
 </style>
