@@ -8,7 +8,7 @@ Kumamoto Covid-19 response site contributors
 | [Makoto Sakuragi(Code for Kumamoto/KumaMCN)](https://www.facebook.com/makoragi) | Project facilitation / Coding |
 | Takeshi Iwaoka | 画像制作 |
 | Kana Tanoue | データ入力 |
-| t-sho | コーディング |
+| [Shota7Y](https://twitter.com/Shota7Y) | issues対応 |
 | -add your name here!- | -what did you do?- |
 
 そして本家サイトに携わっている皆様
