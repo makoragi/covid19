@@ -10,7 +10,7 @@
   "en": {
     "（注）同一の対象者について複数の検体を調査する場合あり": "(Note) More than one sample from the same subject may be tested.",
     "{date}の全体累計": "Cumulative total as of %{date}",
-    "{date}の合計": "Total as of %{date}",
+    "{date}の合計": "Total for %{date}",
     "都内": "Tokyo",
     "その他": "Others",
     "検査実施数は、速報値として公開するものであり、後日確定データとして修正される場合があります": "The number of tests conducted is released as a preliminary figure and may be corrected as determined later on."
