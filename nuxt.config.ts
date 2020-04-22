@@ -58,6 +58,11 @@ const config: Configuration = {
         hid: 'twitter:image',
         name: 'twitter:image',
         content: 'https://kumamoto.stopcovid19.jp/ogp.png'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '234540354278042'
       }
     ],
     link: [

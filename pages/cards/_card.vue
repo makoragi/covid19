@@ -166,12 +166,12 @@ export default {
     return data
   },
   head() {
-    const url = 'https://stopcovid19.metro.tokyo.lg.jp'
+    const url = 'https://kumamoto.stopcovid19.jp'
     const ogpImage = url + '/ogp-' + this.$route.params.card + '.png'
     const description =
       this.updatedAt +
       ' 更新 | ' +
-      '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、東京都が開設したものです。'
+      '当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、熊本県有志が開設したものです。'
 
     return {
       title: this.title,
@@ -184,7 +184,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.title + ' | 東京都 新型コロナウイルス感染症対策サイト'
+          content: this.title + ' | 熊本県 新型コロナウイルス感染症対策サイト'
         },
         {
           hid: 'description',
