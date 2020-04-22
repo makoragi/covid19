@@ -58,6 +58,11 @@ const config: Configuration = {
         hid: 'twitter:image',
         name: 'twitter:image',
         content: 'https://dev-covid19-kumamoto.netlify.com/ogp.png'
+      },
+      {
+        hid: 'fb:app_id',
+        property: 'fb:app_id',
+        content: '234540354278042'
       }
     ],
     link: [
