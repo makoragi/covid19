@@ -1,203 +1,20 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <data-table
-      :title="$t('陽性患者の属性')"
-      :title-id="'attributes-of-confirmed-cases'"
-      :chart-data="patientsTable"
-      :chart-option="{}"
-      :date="Data.patients.date"
-      :info="sumInfoOfPatients"
-      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
-    />
+    <client-only :placeholder="$t('読み込み中')">
+      <data-table
+        :title="$t('陽性患者の属性')"
+        :title-id="'attributes-of-confirmed-cases'"
+        :chart-data="patientsTable"
+        :chart-option="{}"
+        :date="Data.patients.date"
+        :info="sumInfoOfPatients"
+        :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
+        :source="$t('オープンデータを入手')"
+        :custom-sort="customSort"
+      />
+    </client-only>
   </v-col>
 </template>
-
-<i18n>
-{
-  "ja": {
-    "陽性患者の属性": "陽性患者の属性",
-    "{date}の累計": "{date}の累計",
-    "人": "人",
-    "日付": "日付",
-    "居住地": "居住地",
-    "年代": "年代",
-    "性別": "性別",
-    "都内": "都内",
-    "埼玉県": "埼玉県",
-    "湖南省長沙市": "湖南省長沙市",
-    "湖北省武漢市": "湖北省武漢市",
-    "{age}代": "{age}代",
-    "10歳未満": "10歳未満",
-    "男性": "男性",
-    "女性": "女性",
-    "退院※": "退院※",
-    "公表日": "公表日",
-    "不定": "不定",
-    "熊本市": "熊本市",
-    "熊本市内": "熊本市内",
-    "熊本市中央区": "熊本市中央区",
-    "熊本市東区": "熊本市東区",
-    "熊本市西区": "熊本市西区",
-    "熊本市南区": "熊本市南区",
-    "熊本市北区": "熊本市北区",
-    "阿蘇保健所管内": "阿蘇保健所管内",
-    "有明保健所管内": "有明保健所管内",
-    "御船保健所管内": "御船保健所管内",
-    "北海道札幌市": "北海道札幌市"
-  },
-  "en": {
-    "陽性患者の属性": "Confirmed patient attributes",
-    "{date}の累計": "Cumulative total as of {date}",
-    "人": "persons",
-    "日付": "Date",
-    "居住地": "Residence",
-    "年代": "Age",
-    "性別": "Gender",
-    "都内": "Tokyo",
-    "埼玉県": "Saitama",
-    "湖南省長沙市": "Changsha, Hunan Province",
-    "湖北省武漢市": "Wuhan City, Hubei Province ",
-    "{age}代": "{age}s",
-    "10歳未満": "Under 10",
-    "男性": "Male",
-    "女性": "Female",
-    "退院※": "Discharge*",
-    "公表日": "Announced on",
-    "不定": "Unknown",
-    "熊本市": "Kumamoto City",
-    "熊本市内": "Kumamoto City",
-    "熊本市中央区": "Chuo-ku, Kumamoto City",
-    "熊本市東区": "Higashi-ku, Kumamoto City",
-    "熊本市西区": "Nishi-ku, Kumamoto City",
-    "熊本市南区": "Minami-ku, Kumamoto City",
-    "熊本市北区": "Kita-ku, Kumamoto City",
-    "阿蘇保健所管内": "Aso healthcare center",
-    "有明保健所管内": "Ariake healthcare center",
-    "御船保健所管内": "Mifune healthcare center",
-    "北海道札幌市": "Sapporo City, Hokkaido"
-  },
-  "zh-cn": {
-    "陽性患者の属性": "确诊患者的信息",
-    "{date}の累計": "截至 {date}",
-    "人": "人",
-    "日付": "日期",
-    "居住地": "居住地",
-    "年代": "年龄",
-    "性別": "性别",
-    "都内": "东京都",
-    "埼玉県": "埼玉县",
-    "湖南省長沙市": "湖南省长沙市",
-    "湖北省武漢市": "湖北省武汉市",
-    "{age}代": "{age}多岁",
-    "10歳未満": "不到10岁",
-    "男性": "男性",
-    "女性": "女性",
-    "退院※": "出院※",
-    "公表日": "公表日",
-    "不定": "不定",
-    "熊本市": "熊本市",
-    "熊本市中央区": "熊本市中央区",
-    "熊本市東区": "熊本市東区",
-    "熊本市西区": "熊本市西区",
-    "熊本市南区": "熊本市南区",
-    "熊本市北区": "熊本市北区",
-    "阿蘇保健所管内": "阿蘇保健所管内",
-    "有明保健所管内": "有明保健所管内",
-    "御船保健所管内": "御船保健所管内",
-    "北海道札幌市": "北海道札幌市"
-  },
-  "zh-tw": {
-    "陽性患者の属性": "確診案例概況",
-    "{date}の累計": "累計至 {date}",
-    "人": "人",
-    "日付": "日期",
-    "居住地": "居住地",
-    "年代": "年齡",
-    "性別": "性別",
-    "都内": "東京都",
-    "埼玉県": "埼玉縣",
-    "湖南省長沙市": "湖南省長沙市",
-    "湖北省武漢市": "湖北省武漢市",
-    "{age}代": "{age}多歲",
-    "10歳未満": "10歲以下",
-    "男性": "男性",
-    "女性": "女性",
-    "退院※": "出院※",
-    "公表日": "公表日",
-    "不定": "不定",
-    "熊本市": "熊本市",
-    "熊本市中央区": "熊本市中央区",
-    "熊本市東区": "熊本市東区",
-    "熊本市西区": "熊本市西区",
-    "熊本市南区": "熊本市南区",
-    "熊本市北区": "熊本市北区",
-    "阿蘇保健所管内": "阿蘇保健所管内",
-    "有明保健所管内": "有明保健所管内",
-    "御船保健所管内": "御船保健所管内",
-    "北海道札幌市": "北海道札幌市"
-  },
-  "ko": {
-    "陽性患者の属性": "확진 사례의 세부 사항",
-    "{date}の累計": "{date}의 누적 수",
-    "人": "인",
-    "日付": "날짜",
-    "居住地": "거주지",
-    "年代": "나이",
-    "性別": "성별",
-    "都内": "도쿄도내",
-    "埼玉県": "사이타마현",
-    "湖南省長沙市": "후난성 창사시",
-    "湖北省武漢市": "",
-    "{age}代": "{age}대",
-    "10歳未満": "10살 미만",
-    "男性": "남성",
-    "女性": "여성",
-    "退院※": "후베이성 우한시",
-    "公表日": "公表日",
-    "不定": "不定",
-    "熊本市": "熊本市",
-    "熊本市中央区": "熊本市中央区",
-    "熊本市東区": "熊本市東区",
-    "熊本市西区": "熊本市西区",
-    "熊本市南区": "熊本市南区",
-    "熊本市北区": "熊本市北区",
-    "阿蘇保健所管内": "阿蘇保健所管内",
-    "有明保健所管内": "有明保健所管内",
-    "御船保健所管内": "御船保健所管内",
-    "北海道札幌市": "北海道札幌市"
-  },
-  "ja-basic": {
-    "陽性患者の属性": "びょうきの ひとの じょうほう",
-    "{date}の累計": "{date} ぜんぶで",
-    "人": "にん",
-    "日付": "ひづけ",
-    "居住地": "すんでいるところ",
-    "年代": "とし",
-    "性別": "おとこ・おんな・そのほか",
-    "都内": "とうきょうと の なか",
-    "埼玉県": "さいたまけん",
-    "湖南省長沙市": "ちゅうごく こなん しょう ちょうさ し",
-    "湖北省武漢市": "ちゅうごく こほく しょう ぶかん し",
-    "{age}代": "{age}さい",
-    "10歳未満": "10さい より ちいさい ひと",
-    "男性": "おとこ の ひと",
-    "女性": "おんな の ひと",
-    "退院※": "たいいん※",
-    "公表日": "公表日",
-    "不定": "不定",
-    "熊本市": "熊本市",
-    "熊本市中央区": "熊本市中央区",
-    "熊本市東区": "熊本市東区",
-    "熊本市西区": "熊本市西区",
-    "熊本市南区": "熊本市南区",
-    "熊本市北区": "熊本市北区",
-    "阿蘇保健所管内": "阿蘇保健所管内",
-    "有明保健所管内": "有明保健所管内",
-    "御船保健所管内": "御船保健所管内",
-    "北海道札幌市": "北海道札幌市"
-  }
-}
-</i18n>
 
 <script>
 import Data from '@/data/data.json'
@@ -232,14 +49,15 @@ export default {
     }
     // 陽性患者の属性 中身の翻訳
     for (const row of patientsTable.datasets) {
-      row['居住地'] = this.$t(row['居住地'])
-      row['性別'] = this.$t(row['性別'])
+      row['居住地'] = this.getTranslatedWording(row['居住地'])
+      row['性別'] = this.getTranslatedWording(row['性別'])
+      row['退院'] = this.getTranslatedWording(row['退院'])
 
-      if (row['年代'] === '10歳未満') {
-        row['年代'] = this.$t('10歳未満')
-      } else {
+      if (row['年代'].substr(-1, 1) === '代') {
         const age = row['年代'].substring(0, 2)
         row['年代'] = this.$t('{age}代', { age })
+      } else {
+        row['年代'] = this.$t(row['年代'])
       }
     }
 
@@ -249,6 +67,87 @@ export default {
       sumInfoOfPatients
     }
     return data
+  },
+  methods: {
+    getTranslatedWording(value) {
+      if (value === '-' || value === '‐' || value === '―' || value == null) {
+        // 翻訳しようとしている文字列が以下のいずれかだった場合、翻訳しない
+        // - 全角のハイフン
+        // - 半角のハイフン
+        // - 全角のダッシュ
+        // - null
+        return value
+      }
+
+      return this.$t(value)
+    },
+    customSort(items, index, isDesc) {
+      const lt10 = this.$t('10歳未満').toString()
+      const lt100 = this.$t('100歳以上').toString()
+      const unknown = this.$t('不明').toString()
+      const investigating = this.$t('調査中').toString()
+      items.sort((a, b) => {
+        // 両者が等しい場合は 0 を返す
+        if (a[index[0]] === b[index[0]]) {
+          return 0
+        }
+
+        let comparison = 0
+
+        // '10歳未満' < '10代' ... '90代' < '100歳以上' となるようにソートする
+        // 「10歳未満」同士を比較する場合、と「100歳以上」同士を比較する場合、更にそうでない場合に場合分け
+        if (
+          index[0] === '年代' &&
+          (a[index[0]] === lt10 || b[index[0]] === lt10)
+        ) {
+          comparison = a[index[0]] === lt10 ? -1 : 1
+        } else if (
+          index[0] === '年代' &&
+          (a[index[0]] === lt100 || b[index[0]] === lt100)
+        ) {
+          comparison = a[index[0]] === lt100 ? 1 : -1
+        } else {
+          comparison = String(a[index[0]]) < String(b[index[0]]) ? -1 : 1
+        }
+
+        // 公表日のソートを正しくする
+        if (index[0] === '公表日') {
+          // 2/29と3/1が正しくソートできないため、以下は使えない。
+          // 公表日に年まで含む場合は以下が使用可能になり、逆に今使用しているコードが使用不可能となる。
+          // comparison = new Date(a[index[0]]) < new Date(b[index[0]]) ? -1 : 1
+
+          const aDate = a[index[0]].split('/').map(d => {
+            return parseInt(d)
+          })
+          const bDate = b[index[0]].split('/').map(d => {
+            return parseInt(d)
+          })
+          comparison = aDate[1] > bDate[1] ? 1 : -1
+          if (aDate[0] > bDate[0]) {
+            comparison = 1
+          } else if (aDate[0] < bDate[0]) {
+            comparison = -1
+          }
+        }
+
+        // 「調査中」は年代に限らず、居住地にも存在するので、年代ソートの外に置いている。
+        // 内容としては、「不明」の次に高い(大きい)ものとして扱う。
+        // 日本語の場合、「調査中」は「不明」より低い(小さい)ものとして扱われるが、
+        // 他言語の場合はそうではないため、ここで統一している。
+        if (a[index[0]] === investigating || b[index[0]] === investigating) {
+          comparison = a[index[0]] === investigating ? 1 : -1
+        }
+
+        // 「不明」は年代に限らず、性別にも存在するので、年代ソートの外に置いている。
+        // 内容としては一番高い(大きい)ものとして扱う。
+        if (a[index[0]] === unknown || b[index[0]] === unknown) {
+          comparison = a[index[0]] === unknown ? 1 : -1
+        }
+
+        return isDesc[0] ? comparison * -1 : comparison
+      })
+      return items
+    }
   }
 }
 </script>
