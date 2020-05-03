@@ -18,7 +18,8 @@ module.exports = {
     'prettier/prettier': [
       'error', {
         'semi': false,
-        'singleQuote': true
+        'singleQuote': true,
+        'htmlWhitespaceSensitivity': 'ignore'
       }
     ],
     'tsdoc/syntax': 'error'
