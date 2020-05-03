@@ -1,0 +1,146 @@
+RUN,2020/04/27 08:23
+TAG_ADD,（毎週金曜日に、前週木曜日から当該週水曜日までの件数を反映）
+TAG_ADD,※ ヤフーに蓄積された位置情報データなどを元に算出した参考値
+TAG_REMOVE,かかりつけ医に相談することもできます。
+TAG_REMOVE,詳しくはこちらをご参照ください。
+TAG_REMOVE,埼玉県
+TAG_REMOVE,{advisory}による相談結果
+TAG_REMOVE,新型コロナ受診相談窓口
+TAG_REMOVE,※保険適用となる検査は、当面の間、院内感染防止等の観点から、「帰国者・接触者外来」等の医療機関で実施
+TAG_REMOVE,新型コロナ受診相談窓口
+TAG_REMOVE,帰国者・接触者 電話相談センター
+TAG_REMOVE,24時間対応
+TAG_REMOVE,平日（日中）
+TAG_REMOVE,各保健所の電話番号は福祉保健局HPへ
+TAG_REMOVE,平日（夜間）
+TAG_REMOVE,午後5時から翌朝午前9時
+TAG_REMOVE,ひまわり
+TAG_REMOVE,土日祝 終日
+TAG_REMOVE,専門的な助言が必要な場合
+TAG_REMOVE,入院となります
+TAG_REMOVE,感染症指定医療機関等
+TAG_REMOVE,一般の方
+TAG_REMOVE,{duration}続いている
+TAG_REMOVE,{day}日以上
+TAG_REMOVE,{day}日程度
+TAG_REMOVE,{cold}のような症状
+TAG_REMOVE,風邪
+TAG_REMOVE,発熱{temperature}
+TAG_REMOVE,{tempNum}以上
+TAG_REMOVE,37.5℃
+TAG_REMOVE,強いだるさ
+TAG_REMOVE,息苦しさ
+TAG_REMOVE,ご高齢な方
+TAG_REMOVE,基礎疾患のある方
+TAG_REMOVE,妊娠中の方
+TAG_REMOVE,新型コロナ外来 {advice} と判断された場合
+TAG_REMOVE,受診が不要
+TAG_REMOVE,{getWorse}{advisory}に相談
+TAG_REMOVE,症状が良くならない場合は
+TAG_REMOVE,自宅で安静に過ごす
+TAG_REMOVE,一般の医療機関を受診
+TAG_REMOVE,{past}の出来ごとと症状
+TAG_REMOVE,発症前{two}週間以内
+TAG_REMOVE,「新型コロナウイルス感染者」と
+TAG_REMOVE,{closeContact}をした方
+TAG_REMOVE,濃厚接触
+TAG_REMOVE,流行地域への渡航・居住歴がある方
+TAG_REMOVE,{you} か {closeContact}をした方
+TAG_REMOVE,travel history from {area}
+TAG_REMOVE,COVID-19 prevalent area
+TAG_REMOVE,been {inCloseContact} with returnees
+TAG_REMOVE,in close contact
+TAG_REMOVE,ご本人
+TAG_REMOVE,発熱
+TAG_REMOVE,または
+TAG_REMOVE,呼吸器症状
+TAG_REMOVE,かつ
+TAG_REMOVE,PCR検査
+TAG_REMOVE,東京都健康安全研究センター等
+TAG_REMOVE,陰性
+TAG_REMOVE,陽性
+TAG_REMOVE,受診が必要
+TAG_REMOVE,新型コロナ外来（帰国者・接触者外来）
+TAG_REMOVE,医師による判断
+TAG_REMOVE,Diagnosis by a doctor at a COVID-19 outpatient facility
+TAG_REMOVE,検査の必要{ifRequired}
+TAG_REMOVE,あり
+TAG_REMOVE,なし
+TAG_REMOVE,不安に思う方
+TAG_REMOVE,微熱
+TAG_REMOVE,軽い咳
+TAG_REMOVE,感染の不安
+TAG_REMOVE,午前9時から午後9時（土日祝含む）
+TAG_REMOVE,新型コロナ受診相談窓口へ
+TAG_REMOVE,医療機関が保険適用で行った検査は含まれていない
+TAG_REMOVE,（毎週金曜日に、前週木曜日から当該週水曜日までの日々の件数を反映）
+TAG_REMOVE,（注）検査実施人数には、チャーター機帰国者、クルーズ船乗客等は含まれていない
+RUN,2020/04/27 17:36
+TAG_ADD,（注）「重症」は、集中治療室（ICU）等での管理又は人工呼吸器管理が必要な患者数を計上
+RUN,2020/04/28 09:14
+TAG_ADD,東京都における滞在人口の増減
+TAG_ADD,ご家庭でのマスク等の捨て方
+RUN,2020/05/02 21:55
+TAG_ADD, / 
+TAG_ADD,他地域の対策サイト(政府CIOポータル)
+TAG_ADD,（注）熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載
+TAG_ADD,※当サイトは熊本県内の有志が開設したものです
+TAG_ADD,熊本市西区
+TAG_ADD,アマビエ
+TAG_ADD,【県】新型コロナウイルス感染症が心配なときに
+TAG_ADD,札幌市
+TAG_ADD,阿蘇保健所管内
+TAG_ADD,またベストエフォートで対応しているため、更新が遅れる場合がありますので、ご了承ください。
+TAG_ADD,公開期限と更新について
+TAG_ADD,当サイトは新型コロナウイルス感染症（COVID-19）に関する最新情報を提供するために、熊本県有志が開設したものです。
+TAG_ADD,熊本県
+TAG_ADD,熊本県内の最新感染動向
+TAG_ADD,御船保健所管内
+TAG_ADD,感染拡大状況により予告なく当サイトを停止することもあります。随時、運営（Code for Kumamoto）メンバーで継続か停止を議論して進めます。
+TAG_ADD,オープンデータへのリンク
+TAG_ADD,東京都公式新型コロナウイルス対策サイトの仕組みを利用しています。
+TAG_ADD,熊本市東区
+TAG_ADD,帰国者・接触者相談 センター 相談件数(熊本県)
+TAG_ADD,検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります
+TAG_ADD,熊本市南区
+TAG_ADD,【県】熊本県公式ホームページ
+TAG_ADD,Makoto Sakuragi
+TAG_ADD,【県】県民の皆様へ
+TAG_ADD,製作者:
+TAG_ADD,当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、熊本県有志が開設したものです。熊本県から発表された情報を用いていますが、本サイトの運営に関しては熊本県は一切関係しておりません。
+TAG_ADD,熊本市中央区
+TAG_ADD,熊本県による公式情報と客観的な数値をわかりやすく伝えることで、熊本県にお住まいの方や、熊本県内に拠点を持つ企業の方、熊本県を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
+TAG_ADD,県検査分(熊本市を除く)
+TAG_ADD,【県】事業者の皆様へ
+TAG_ADD,○
+TAG_ADD,有明保健所管内
+TAG_ADD,不定
+TAG_ADD,熊本市検査分
+TAG_ADD,【県】知事からのメッセージ
+TAG_ADD,当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、熊本県有志が開設したものです。
+TAG_ADD,熊本市北区
+TAG_ADD,Code for Kumamoto
+TAG_ADD,当サイトに掲載されている情報の正確性については万全を期していますが、熊本県およびサイト制作者は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。
+TAG_REMOVE,都内の最新感染動向
+TAG_REMOVE,都内発生（※1）
+TAG_REMOVE,※1: 疑い例・接触者調査
+TAG_REMOVE,その他（※2）
+TAG_REMOVE,※2: チャーター便・クルーズ船
+TAG_REMOVE,都内
+TAG_REMOVE,湖南省長沙市
+TAG_REMOVE,湖北省武漢市
+TAG_REMOVE,当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。
+TAG_REMOVE,東京都による公式情報と客観的な数値をわかりやすく伝えることで、東京都にお住まいの方や、東京都内に拠点を持つ企業の方、東京都を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。
+TAG_REMOVE,当サイトに掲載されている情報の正確性については万全を期していますが、東京都は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。
+TAG_REMOVE,本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）
+TAG_REMOVE,都民の皆様へ
+TAG_REMOVE,東京都公式ホームページ
+TAG_REMOVE,知事からのメッセージ
+TAG_REMOVE,（注）「入院中」には、入院調整中・宿泊療養に移行した方を含む
+TAG_REMOVE,（注）医療機関が保険適用で行った検査件数を含む検査実施件数は、毎週金曜日に前週木曜日から当該週水曜日までの日々の保険適用分の件数を反映して更新
+TAG_REMOVE,（注）日々の速報値（医療機関が保険適用で行った検査は含まない）は、毎日更新
+TAG_REMOVE,〇
+TAG_REMOVE,新型コロナウイルス感染症に関する東京都の支援策
+TAG_REMOVE,（注）退院者数の把握には一定の期間を要しており、確認次第数値を更新している
+TAG_REMOVE,（注）「重症」は、集中治療室（ICU）等での管理又は人工呼吸器管理が必要な患者数を計上
+TAG_REMOVE,東京都における滞在人口の増減

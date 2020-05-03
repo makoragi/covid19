@@ -9,10 +9,10 @@ const headers = [
 ]
 
 type DataType = {
-  リリース日: Date
+  リリース日: string
   居住地: string | null
   年代: string | null
-  性別: '男性' | '女性'
+  性別: '男性' | '女性' | string
   退院: '◯' | null
   [key: string]: any
 }
@@ -41,15 +41,18 @@ export default (data: DataType[]) => {
     datasets: []
   }
   data.forEach(d => {
+    const releaseDate = dayjs(d['リリース日'])
     const TableRow: TableDataType = {
-      公表日: dayjs(d['リリース日']).format('MM/DD') ?? '不明',
-      居住地: d['居住地'] ?? '不明',
+      公表日: releaseDate.isValid() ? releaseDate.format('M/D') : '不明',
+      居住地: d['居住地'] ?? '調査中',
       年代: d['年代'] ?? '不明',
       性別: d['性別'] ?? '不明',
       退院: d['退院']
     }
     tableDate.datasets.push(TableRow)
   })
-  tableDate.datasets.sort((a, b) => (a === b ? 0 : a < b ? 1 : -1))
+  tableDate.datasets
+    .sort((a, b) => dayjs(a.公表日).unix() - dayjs(b.公表日).unix())
+    .reverse()
   return tableDate
 }
