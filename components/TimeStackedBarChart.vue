@@ -272,13 +272,9 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       const colorArray = ['#7F0000', '#C60000']
       const graphSeries = getGraphSeriesStyle(this.chartData.length)
       if (this.dataKind === 'transition') {
-        // 日別では先頭データを削除する(過去の累計値だから) by C4K
-        const labelsMod = this.labels.slice(1, this.labels.length)
         return {
-          labels: labelsMod,
+          labels: this.labels,
           datasets: this.chartData.map((item, index) => {
-            // 日別の表示では先頭データを削除する(過去の累計値だから) by C4K
-            const itemMod = item.slice(1, item.length)
             return {
               label: this.items[index],
               data: item,

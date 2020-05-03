@@ -230,20 +230,16 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayData() {
       const style = getGraphSeriesStyle(1)[0]
       if (this.dataKind === 'transition') {
-        // 日別では先頭データを削除する(過去の累計値だから) by C4K
-        const chartDataMod = this.chartData.slice(1, this.chartData.length)
         return {
-          labels: chartDataMod.map(d => {
+          labels: this.chartData.map(d => {
             return d.label
           }),
           datasets: [
             {
               label: this.dataKind,
-              data: chartDataMod.map(d => {
+              data: this.chartData.map(d => {
                 return d.transition
               }),
-              //kumamoto// backgroundColor: '#7F0000',
-              //kumamoto// borderWidth: 0
               backgroundColor: style.fillColor,
               borderColor: style.strokeColor,
               borderWidth: 1
@@ -259,8 +255,6 @@ const options: ThisTypedComponentOptionsWithRecordProps<
             data: this.chartData.map(d => {
               return d.cumulative
             }),
-            //kumamoto//backgroundColor: '#7F0000',
-            //kumamoto//borderWidth: 0
             backgroundColor: style.fillColor,
             borderColor: style.strokeColor,
             borderWidth: 1
