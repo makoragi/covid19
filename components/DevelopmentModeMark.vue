@@ -4,7 +4,7 @@
     <a
       href="https://stop-covid19-kumamoto.netlify.com/"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       公開サイトへ
     </a>
