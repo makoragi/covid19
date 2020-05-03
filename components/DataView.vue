@@ -32,9 +32,9 @@
                   <v-icon left>mdi-chevron-right</v-icon>
                 </div>
               </template>
-              <span class="expansion-panel-text">{{
-                $t('テーブルを表示')
-              }}</span>
+              <span class="expansion-panel-text">
+                {{ $t('テーブルを表示') }}
+              </span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <slot name="dataTable" />
@@ -50,7 +50,7 @@
       </div>
       <div class="DataView-Footer">
         <div class="Footer-Left">
-<!--
+          <!--
           <div>
             <a
               v-if="url"
@@ -75,9 +75,9 @@
           <slot name="footer" />
           <div>
             <a class="Permalink" :href="permalink()">
-              <time :datetime="formattedDate">{{
-                $t('{date} 更新', { date })
-              }}</time>
+              <time :datetime="formattedDate">
+                {{ $t('{date} 更新', { date }) }}
+              </time>
             </a>
           </div>
         </div>
@@ -116,9 +116,9 @@
             @click="stopClosingShareMenu"
           >
             <div class="Close-Button">
-              <v-icon :aria-label="$t('閉じる')" @click="closeShareMenu"
-                >mdi-close</v-icon
-              >
+              <v-icon :aria-label="$t('閉じる')" @click="closeShareMenu">
+                mdi-close
+              </v-icon>
             </div>
 
             <h4>{{ $t('埋め込み用コード') }}</h4>
@@ -129,8 +129,9 @@
                 class="EmbedCode-Copy"
                 :aria-label="$t('クリップボードにコピー')"
                 @click="copyEmbedCode"
-                >mdi-clipboard-outline</v-icon
               >
+                mdi-clipboard-outline
+              </v-icon>
               {{ graphEmbedValue }}
             </div>
 
