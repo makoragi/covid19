@@ -1,13 +1,9 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date" :url="url">
+  <data-view :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
       <ul :class="$style.GraphDesc">
         <li>
-          {{
-            $t(
-              '（注）同一の対象者について複数の検体を検査する場合あり'
-            )
-          }}
+          {{ $t('（注）同一の対象者について複数の検体を検査する場合あり') }}
         </li>
         <li>
           {{
@@ -39,8 +35,9 @@
             :style="{
               textDecoration: displayLegends[i] ? 'none' : 'line-through'
             }"
-            >{{ item }}</span
           >
+            {{ item }}
+          </span>
         </button>
       </li>
     </ul>
@@ -269,7 +266,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       }
     },
     displayData() {
-      const colorArray = ['#7F0000', '#C60000']
+      // const colorArray = ['#7F0000', '#C60000']
       const graphSeries = getGraphSeriesStyle(this.chartData.length)
       if (this.dataKind === 'transition') {
         return {
