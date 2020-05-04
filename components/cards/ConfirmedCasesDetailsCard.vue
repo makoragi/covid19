@@ -3,18 +3,22 @@
     <data-view
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="updatedAt"
+      :date="Data.inspections_summary.date"
     >
       <template v-slot:description>
         <ul>
           <li>
             {{
-              $t('（注）熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載')
+              $t(
+                '（注）熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載'
+              )
             }}
           </li>
           <li>
             {{
-              $t('検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります')
+              $t(
+                '検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります'
+              )
             }}
           </li>
         </ul>
