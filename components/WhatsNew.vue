@@ -5,7 +5,13 @@
         <v-icon size="24" class="WhatsNew-title-icon">
           mdi-information
         </v-icon>
-        {{ $t('最新のお知らせ') }}
+        <!-- {{ $t('最新のお知らせ') }} -->
+        <a
+          href="https://www.pref.kumamoto.jp/hpkiji/pub/List.aspx?c_id=3&class_set_id=1&class_id=7049"
+          target="_blank"
+        >
+          {{ $t('熊本県発表の新型コロナウイルス感染症に関する情報はこちら') }}
+        </a>
       </h3>
       <!-- <span class="WhatsNew-link-to-emergency-page">
         <external-link
@@ -18,7 +24,7 @@
         </external-link>
       </span> -->
     </div>
-    <ul class="WhatsNew-list">
+    <!-- <ul class="WhatsNew-list">
       <li v-for="(item, i) in items" :key="i" class="WhatsNew-list-item">
         <a
           class="WhatsNew-list-item-anchor"
@@ -44,39 +50,41 @@
           </span>
         </a>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
+//
 <script lang="ts">
-import Vue from 'vue'
-import ExternalLink from '@/components/ExternalLink.vue'
+// import Vue from 'vue'
+// import ExternalLink from '@/components/ExternalLink.vue'
 
-import {
-  convertDateByCountryPreferTimeFormat,
-  convertDateToISO8601Format
-} from '@/utils/formatDate'
+// import {
+//   convertDateByCountryPreferTimeFormat,
+//   convertDateToISO8601Format
+// } from '@/utils/formatDate'
 
-export default Vue.extend({
-  components: { ExternalLink },
-  props: {
-    items: {
-      type: Array,
-      required: true
-    }
-  },
-  methods: {
-    isInternalLink(path: string): boolean {
-      return !/^https?:\/\//.test(path)
-    },
-    formattedDate(dateString: string) {
-      return convertDateToISO8601Format(dateString)
-    },
-    formattedDateForDisplay(dateString: string) {
-      return convertDateByCountryPreferTimeFormat(dateString, this.$i18n.locale)
-    }
-  }
-})
+// export default Vue.extend({
+//   components: { ExternalLink },
+//   props: {
+//     items: {
+//       type: Array,
+//       required: true
+//     }
+//   },
+//   methods: {
+//     isInternalLink(path: string): boolean {
+//       return !/^https?:\/\//.test(path)
+//     },
+//     formattedDate(dateString: string) {
+//       return convertDateToISO8601Format(dateString)
+//     },
+//     formattedDateForDisplay(dateString: string) {
+//       return convertDateByCountryPreferTimeFormat(dateString, this.$i18n.locale)
+//     }
+//   }
+// })
+//
 </script>
 
 <style lang="scss">
@@ -91,7 +99,7 @@ export default Vue.extend({
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 12px;
+    // margin-bottom: 12px;
 
     .WhatsNew-title {
       display: flex;
@@ -103,12 +111,12 @@ export default Vue.extend({
       }
     }
 
-  // &-item {
-  //   &-anchor {
-  //     display: inline-block;
-  //     text-decoration: none;
-  //     margin: 5px;
-  //     font-size: 14px;
+    // &-item {
+    //   &-anchor {
+    //     display: inline-block;
+    //     text-decoration: none;
+    //     margin: 5px;
+    //     font-size: 14px;
     .WhatsNew-link-to-emergency-page {
       background-color: $emergency;
       border: 2px solid $emergency;
@@ -137,47 +145,13 @@ export default Vue.extend({
         margin-top: 4px;
       }
     }
-  }
-
-  .WhatsNew-list {
-    padding-left: 0;
-    list-style-type: none;
-
-    &-item {
-      &-anchor {
-        text-decoration: none;
-        margin: 5px;
-        font-size: 14px;
-
-        @include lessThan($medium) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        &-time {
-          flex: 0 0 90px;
-
-          @include lessThan($medium) {
-            flex: 0 0 100%;
-          }
-
-          color: $gray-1;
-        }
-
-        &-link {
-          flex: 0 1 auto;
-
-          @include text-link();
-
-          @include lessThan($medium) {
-            padding-left: 8px;
-          }
-        }
-
-        &-ExternalLinkIcon {
-          margin-left: 2px;
-          color: $gray-3 !important;
-        }
+    a {
+      padding: 0.5em;
+      font-size: 0.875rem;
+      color: #006ca8;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
