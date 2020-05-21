@@ -36,7 +36,7 @@ export default {
       this.$t('熊本市検査分')
     ]
     const inspectionsLabels = Data.inspections_summary.labels
-    const inspectionsDataLabels = [this.$t('都内発生'), this.$t('その他.graph')]
+    const inspectionsDataLabels = [this.$t('県(熊本市以外)'), this.$t('熊本市')]
 
     const data = {
       Data,
