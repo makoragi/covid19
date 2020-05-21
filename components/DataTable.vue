@@ -1,9 +1,10 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date" :url="url">
+  <data-view :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
       <span />
     </template>
     <v-data-table
+      :ref="'displayedTable'"
       :headers="chartData.headers"
       :items="chartData.datasets"
       :items-per-page="-1"
@@ -11,10 +12,30 @@
       :height="240"
       :fixed-header="true"
       :mobile-breakpoint="0"
+      :custom-sort="customSort"
       class="cardTable"
-    />
+    >
+      <template v-slot:body="{ items }">
+        <tbody>
+          <tr v-for="item in items" :key="item.text">
+            <th class="text-start">{{ item['公表日'] }}</th>
+            <td class="text-start">{{ item['居住地'] }}</td>
+            <td class="text-start">{{ item['年代'] }}</td>
+            <td class="text-start">{{ item['性別'] }}</td>
+            <td class="text-center">{{ item['退院'] }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-data-table>
     <div class="note">
-      {{ $t('※退院には、死亡退院を含む') }}
+      <ul>
+        <!-- <li>
+          {{ $t('※退院は、保健所から報告があり、確認ができているものを反映') }}
+        </li> -->
+        <li>
+          {{ $t('※死亡退院を含む') }}
+        </li>
+      </ul>
     </div>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
@@ -23,63 +44,81 @@
         :unit="info.unit"
       />
     </template>
+    <template v-slot:footer>
+      <open-data-link :url="url" />
+    </template>
   </data-view>
 </template>
-
-<i18n src="./DataTable.i18n.json"></i18n>
 
 <style lang="scss">
 .cardTable {
   &.v-data-table {
+    box-shadow: 0 -20px 12px -12px #0003 inset;
     th {
       padding: 8px 10px;
       height: auto;
       border-bottom: 1px solid $gray-4;
-      white-space: nowrap;
       color: $gray-2;
       font-size: 12px;
+
       &.text-center {
         text-align: center;
       }
     }
+
     tbody {
       tr {
         color: $gray-1;
+
+        th {
+          font-weight: normal;
+        }
+
         td {
           padding: 8px 10px;
           height: auto;
           font-size: 12px;
+
           &.text-center {
             text-align: center;
           }
         }
+
         &:nth-child(odd) {
+          th,
           td {
             background: rgba($gray-4, 0.3);
           }
         }
-        &:not(:last-child) {
-          td:not(.v-data-table__mobile-row) {
-            border: none;
-          }
-        }
       }
+    }
+    &:focus {
+      outline: dotted $gray-3 1px;
     }
   }
 }
+
 .note {
-  padding: 8px;
+  margin: 8px 0 0;
   font-size: 12px;
-  color: #808080;
+  color: $gray-3;
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+  }
 }
 </style>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import DataView from '@/components/DataView.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 
-export default {
-  components: { DataView, DataViewBasicInfoPanel },
+export default Vue.extend({
+  components: { DataView, DataViewBasicInfoPanel, OpenDataLink },
   props: {
     title: {
       type: String,
@@ -99,14 +138,42 @@ export default {
     },
     info: {
       type: Object,
-      required: false,
       default: () => {}
     },
     url: {
       type: String,
-      required: false,
       default: ''
+    },
+    customSort: {
+      type: Function,
+      default(items: Object[], index: string[], isDesc: boolean[]) {
+        items.sort((a: any, b: any) => {
+          let comparison = 0
+          if (String(a[index[0]]) < String(b[index[0]])) {
+            comparison = -1
+          } else if (String(b[index[0]]) < String(a[index[0]])) {
+            comparison = 1
+          }
+          // a と b が等しい場合は上記のif文を両方とも通過するので 0 のままとなる
+
+          // 降順指定の場合は符号を反転
+          if (comparison !== 0) {
+            comparison = isDesc[0] ? comparison * -1 : comparison
+          }
+          return comparison
+        })
+        return items
+      }
     }
+  },
+  mounted() {
+    const vTables = this.$refs.displayedTable as Vue
+    const vTableElement = vTables.$el
+    const tables = vTableElement.querySelectorAll('table')
+
+    tables.forEach((table: HTMLElement) => {
+      table.setAttribute('tabindex', '0')
+    })
   }
-}
+})
 </script>
