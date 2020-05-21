@@ -1,24 +1,30 @@
 {
     "newsItems": [
         {
-            "date": "3\/14\/2020",
-            "url": "https:\/\/github.com\/codeforkumamoto\/covid19\/",
-            "text": "地域版を作成開始しました"
+            "date": "2020\/04\/05",
+            "text": "データは随時更新中です。ただし手動のため更新タイミングは不定です。"
+        }
+    ],
+    "oldNewsItems": [
+        {
+            "date": "2020\/03\/18",
+            "url": "https://www.pref.kumamoto.jp/common/UploadFileOutput.ashx?c_id=3&id=30386&sub_id=67&flid=226255",
+            "text": "感染症対応フローを3/16版へ更新しました。"
         },
         {
-            "date": "3\/18\/2020",
-            "url": "",
-            "text": "Web公開しました"
-        },
-        {
-            "date": "3\/18\/2020",
+            "date": "2020\/03\/18",
             "url": "/about",
             "text": "公開期限と更新について説明を追加しました"
         },
         {
-            "date": "3\/18\/2020",
-            "url": "https://www.pref.kumamoto.jp/common/UploadFileOutput.ashx?c_id=3&id=30386&sub_id=67&flid=226255",
-            "text": "感染症対応フローを3/16版へ更新しました。"
+            "date": "2020\/03\/18",
+            "url": "",
+            "text": "Web公開しました"
+        },
+        {
+            "date": "2020\/03\/14",
+            "url": "https://github.com/codeforkumamoto/covid19/",
+            "text": "地域版を作成開始しました"
         }
     ]
 }
