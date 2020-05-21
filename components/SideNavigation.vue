@@ -10,15 +10,15 @@
       </v-icon>
       <h1 class="SideNavigation-HeaderTitle">
         <nuxt-link :to="localePath('/')" class="SideNavigation-HeaderLink">
-        <div class="SideNavigation-Logo">
-          <img src="/logo.png" :alt="$t('熊本県')" />
-        </div>
-        <div class="SideNavigation-HeaderText">
-          {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
-            $t('menu/対策サイト')
-          }}
-        </div>
-      </nuxt-link>
+          <div class="SideNavigation-Logo">
+            <img src="/logo.png" :alt="$t('熊本県')" />
+          </div>
+          <div class="SideNavigation-HeaderText">
+            {{ $t('menu/新型コロナウイルス感染症') }}
+            <br />
+            {{ $t('menu/対策サイト') }}
+          </div>
+        </nuxt-link>
       </h1>
     </header>
 
@@ -148,8 +148,7 @@ export default Vue.extend({
           icon: 'CovidIcon',
           title: this.$t('【県】新型コロナウイルス感染症が心配なときに'),
           // link: this.localePath('/flow'),
-          link:
-            'https://www.pref.kumamoto.jp/common/UploadFileOutput.ashx?c_id=3&id=30386&sub_id=67&flid=226255',
+          link: 'https://www.pref.kumamoto.jp/kiji_31292.html',
           divider: true
         },
         // {
