@@ -56,7 +56,7 @@
 
 //
 <script lang="ts">
-// import Vue from 'vue'
+import Vue from 'vue'
 // import ExternalLink from '@/components/ExternalLink.vue'
 
 // import {
@@ -64,27 +64,26 @@
 //   convertDateToISO8601Format
 // } from '@/utils/formatDate'
 
-// export default Vue.extend({
-//   components: { ExternalLink },
-//   props: {
-//     items: {
-//       type: Array,
-//       required: true
-//     }
-//   },
-//   methods: {
-//     isInternalLink(path: string): boolean {
-//       return !/^https?:\/\//.test(path)
-//     },
-//     formattedDate(dateString: string) {
-//       return convertDateToISO8601Format(dateString)
-//     },
-//     formattedDateForDisplay(dateString: string) {
-//       return convertDateByCountryPreferTimeFormat(dateString, this.$i18n.locale)
-//     }
-//   }
-// })
-//
+export default Vue.extend({
+  // components: { ExternalLink },
+  // props: {
+  //   items: {
+  //     type: Array,
+  //     required: true
+  //   }
+  // },
+  // methods: {
+  //   isInternalLink(path: string): boolean {
+  //     return !/^https?:\/\//.test(path)
+  //   },
+  //   formattedDate(dateString: string) {
+  //     return convertDateToISO8601Format(dateString)
+  //   },
+  //   formattedDateForDisplay(dateString: string) {
+  //     return convertDateByCountryPreferTimeFormat(dateString, this.$i18n.locale)
+  //   }
+  // }
+})
 </script>
 
 <style lang="scss">
