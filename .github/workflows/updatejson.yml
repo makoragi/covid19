@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: master
 
       - name: Copy data.json
         run: curl -o data/data.json https://raw.githubusercontent.com/makoragi/kumamoto-covid19/gh-pages/data.json
