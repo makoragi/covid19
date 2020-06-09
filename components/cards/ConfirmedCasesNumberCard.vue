@@ -9,20 +9,17 @@
       :unit="$t('人')"
       :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
     >
-    <!-- 以下は熊本では不要
       <template v-slot:description>
         <ul>
           <li>
-            {{ $t('（注）医療機関が保険適用で行った検査も含む') }}
-          </li>
-          <li>
             {{
-              $t('（注）チャーター機帰国者、クルーズ船乗客等は含まれていない')
+              $t(
+                '（注）陽性者における日付は、公表日ではなく、検査により陽性が確定された日'
+              )
             }}
           </li>
         </ul>
       </template>
-    -->
     </time-bar-chart>
   </v-col>
 </template>
