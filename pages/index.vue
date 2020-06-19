@@ -5,6 +5,7 @@
       <div class="UpdatedAt">
         <span>{{ $t('最終更新') }}</span>
         <time :datetime="updatedAt">{{ Data.lastUpdate }}</time>
+        <span>{{ $t('※データ更新は平日(県庁稼働日)の夜間です') }}</span>
       </div>
       <div
         v-show="!['ja', 'ja-basic'].includes($i18n.locale)"
