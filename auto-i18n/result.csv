@@ -170,3 +170,6 @@ TAG_ADD,None
 TAG_ADD,※データ更新は平日(県庁稼働日)の夜間です
 RUN,2020/06/20 02:29
 TAG_REMOVE,None
+RUN,2020/06/23 07:30
+TAG_ADD,
+TAG_ADD,天草保健所管内
