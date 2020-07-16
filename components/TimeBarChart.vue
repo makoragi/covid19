@@ -341,7 +341,14 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 suggestedMin: 0,
                 maxTicksLimit: 8,
                 fontColor: '#808080',
-                suggestedMax: scaledTicksYAxisMax
+                suggestedMax: scaledTicksYAxisMax,
+                // 小数点以下を出さないように(陽性患者数)
+                beginAtZero: true,
+                callback(value: any, _index: any, _values: any) {
+                  if (Math.floor(value) === value) {
+                    return value
+                  }
+                }
               }
             }
           ]
@@ -455,7 +462,14 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 suggestedMin: 0,
                 maxTicksLimit: 8,
                 fontColor: '#808080', // #808080
-                suggestedMax: scaledTicksYAxisMax
+                suggestedMax: scaledTicksYAxisMax,
+                // 小数点以下を出さないように(陽性患者数)
+                beginAtZero: true,
+                callback(value: any, _index: any, _values: any) {
+                  if (Math.floor(value) === value) {
+                    return value
+                  }
+                }
               }
             }
           ]
