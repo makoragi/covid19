@@ -11,6 +11,7 @@
       :unit="$t('件.tested')"
       :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
       :data-labels="inspectionsDataLabels"
+      :remarks="remarks"
     >
       <!-- 件.tested = 検査数 -->
     </time-stacked-bar-chart>
@@ -38,12 +39,18 @@ export default {
     const inspectionsLabels = Data.inspections_summary.labels
     const inspectionsDataLabels = [this.$t('県(熊本市以外)'), this.$t('熊本市')]
 
+    const remarks = [
+      '同一の対象者について複数の検体を検査する場合あり',
+      '速報値として公開するものであり、後日確定データとして修正される場合あり'
+    ]
+
     const data = {
       Data,
       inspectionsGraph,
       inspectionsItems,
       inspectionsLabels,
-      inspectionsDataLabels
+      inspectionsDataLabels,
+      remarks
     }
     return data
   }
