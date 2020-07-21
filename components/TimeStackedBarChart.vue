@@ -1,7 +1,13 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date">
+  <data-view
+    :title="title"
+    :title-id="titleId"
+    :date="date"
+    :url="url"
+    :remarks="remarks"
+  >
     <template v-slot:button>
-      <ul :class="$style.GraphDesc">
+      <!-- <ul :class="$style.GraphDesc">
         <li>
           {{ $t('（注）同一の対象者について複数の検体を検査する場合あり') }}
         </li>
@@ -12,7 +18,7 @@
             )
           }}
         </li>
-      </ul>
+      </ul> -->
       <data-selector
         v-model="dataKind"
         :target-id="chartId"
@@ -171,6 +177,8 @@ type Props = {
   unit: string
   scrollPlugin: Chart.PluginServiceRegistrationOptions[]
   yAxesBgPlugin: Chart.PluginServiceRegistrationOptions[]
+  url: string
+  remarks: string[]
 }
 
 const options: ThisTypedComponentOptionsWithRecordProps<
@@ -224,12 +232,11 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       type: String,
       default: ''
     },
-    // なんかエラーになったので一旦コメントアウト (kumamoto)
-    // url: {
-    //   type: String,
-    //   required: false,
-    //   default: ''
-    // },
+    url: {
+      type: String,
+      required: false,
+      default: ''
+    },
     scrollPlugin: {
       type: Array,
       default: () => scrollPlugin
@@ -237,6 +244,9 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     yAxesBgPlugin: {
       type: Array,
       default: () => yAxesBgPlugin
+    },
+    remarks: {
+      type: Array
     }
   },
   data: () => ({
