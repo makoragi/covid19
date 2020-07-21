@@ -46,7 +46,7 @@ export default {
     // const patientsGraph = formatGraph(Data.patients_summary.data)
 
     const remarks = [
-      '陽性者における日付は、公表日ではなく、検査により陽性が確定された日'
+      this.$t('陽性者における日付は、公表日ではなく、検査により陽性が確定された日')
     ]
 
     const data = {

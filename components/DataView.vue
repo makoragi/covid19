@@ -82,7 +82,7 @@
               target="_blank"
               rel="noopener"
             >
-              出典: 熊本県オープンデータサイト
+              {{ $t('出典: 熊本県オープンデータサイト') }}
               <v-icon class="ExternalLinkIcon" size="15">
                 mdi-open-in-new
               </v-icon>

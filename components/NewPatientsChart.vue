@@ -80,15 +80,15 @@ export default class NewPatientsChart extends Vue {
   public url?: string
 
   private readonly remarks = [
-    '陽性者における日付は、公表日ではなく、検査により陽性が確定された日',
-    '過去7日間の平均は、新規感染者数の後方7日移動平均値です'
+    this.$t('陽性者における日付は、公表日ではなく、検査により陽性が確定された日'),
+    this.$t('過去7日間の平均は、新規感染者数の後方7日移動平均値です')
   ]
 
   private readonly showSelector = true
   private dataKind: DataKind = 'transition'
   private readonly dataKinds = [
-    { key: 'transition', label: '日別' } as SelectorItem,
-    { key: 'cumulative', label: '累計' } as SelectorItem
+    { key: 'transition', label: this.$t('日別') } as SelectorItem,
+    { key: 'cumulative', label: this.$t('累計') } as SelectorItem
   ]
 
   private readonly chartDataSet = new Map<DataKind, GraphData>()
@@ -97,7 +97,7 @@ export default class NewPatientsChart extends Vue {
     // return `${
     //   this.dataKind === 'cumulative' ? '累計' : '新規'
     // }感染者数`
-    return `陽性患者数`
+    return this.$t('陽性患者数').toString()
   }
 
   private formatDayBeforeRatio = (dayBeforeRatio: any) => {
@@ -207,15 +207,15 @@ export default class NewPatientsChart extends Vue {
       datasets: [
         {
           type: 'bar',
-          title: '陽性者数',
-          unit: '人',
+          title: this.$t('陽性者数'),
+          unit: this.$t('人'),
           values: rows.select(d => d.count).toArray(),
           order: 2
         },
         {
           type: 'line',
-          title: '過去7日間の平均',
-          unit: '人',
+          title: this.$t('過去7日間の平均'),
+          unit: this.$t('人'),
           values: rows.select(d => d.average7days).toArray(),
           order: 1
         }
@@ -243,8 +243,8 @@ export default class NewPatientsChart extends Vue {
       datasets: [
         {
           type: 'bar',
-          title: '陽性者累計数',
-          unit: '人',
+          title: this.$t('陽性者累計数'),
+          unit: this.$t('人'),
           values: rows.select(d => d.total).toArray()
         }
       ]

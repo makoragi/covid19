@@ -68,8 +68,8 @@ export default class DataSelector extends Vue {
       return this.items
     } else {
       return [
-        { key: 'transition', label: '日別' } as SelectorItem,
-        { key: 'cumulative', label: '累計' } as SelectorItem
+        { key: 'transition', label: this.$t('日別') } as SelectorItem,
+        { key: 'cumulative', label: this.$t('累計') } as SelectorItem
       ]
     }
   }
