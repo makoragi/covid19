@@ -1,6 +1,11 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
-    <time-bar-chart
+    <new-patients-chart
+      :date="Data.patients_summary.date"
+      :daily-data="Data.patients_summary.data"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
+    />
+    <!-- <time-bar-chart
       :title="$t('陽性患者数')"
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
@@ -8,7 +13,6 @@
       :date="Data.patients.date"
       :unit="$t('人')"
       :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
-    >
       <template v-slot:description>
         <ul>
           <li>
@@ -20,26 +24,29 @@
           </li>
         </ul>
       </template>
-    </time-bar-chart>
+    </time-bar-chart> -->
   </v-col>
 </template>
 
 <script>
 import Data from '@/data/data.json'
-import formatGraph from '@/utils/formatGraph'
-import TimeBarChart from '@/components/TimeBarChart.vue'
+// import formatGraph from '@/utils/formatGraph'
+// import TimeBarChart from '@/components/TimeBarChart.vue'
+import NewPatientsChart from '@/components/NewPatientsChart.vue'
 
 export default {
   components: {
-    TimeBarChart
+    // TimeBarChart,
+    NewPatientsChart
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    // const patientsGraph = formatGraph(Data.patients_summary.data)
 
     const data = {
-      Data,
-      patientsGraph
+      Data
+      // ,
+      // patientsGraph
     }
     return data
   }

@@ -73,6 +73,22 @@
           </div>
 -->
           <slot name="footer" />
+          <remarks-view class="Remarks" :remarks="remarks" />
+          <div class="SourceAndDate">
+            <a
+              v-if="url"
+              class="OpenDataLink"
+              :href="url"
+              target="_blank"
+              rel="noopener"
+            >
+              出典: 熊本県オープンデータサイト{{ subtext }}
+              <v-icon class="ExternalLinkIcon" size="15">
+                mdi-open-in-new
+              </v-icon>
+            </a>
+          </div>
+          <!-- <time :datetime="formattedDate">{{ date }} 更新</time> -->
           <div>
             <a class="Permalink" :href="permalink()">
               <time :datetime="formattedDate">
@@ -81,7 +97,6 @@
             </a>
           </div>
         </div>
-
         <div v-if="this.$route.query.embed != 'true'" class="Footer-Right">
           <v-tooltip left nudge-right="20" nudge-bottom="4">
             <template v-slot:activator="{ on }">
@@ -203,8 +218,10 @@
 import Vue from 'vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 import { EventBus, TOGGLE_EVENT } from '@/utils/card-event-bus'
+import RemarksView from '@/components/RemarksView.vue'
 
 export default Vue.extend({
+  components: { RemarksView },
   props: {
     title: {
       type: String,
@@ -222,6 +239,14 @@ export default Vue.extend({
       type: Boolean,
       required: false,
       default: false
+    },
+    remarks: {
+      type: Array,
+      default: () => []
+    },
+    url: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -479,13 +504,13 @@ export default Vue.extend({
       color: $gray-3 !important;
     }
 
-    .OpenDataLink {
-      text-decoration: none;
+    // .OpenDataLink {
+    //   text-decoration: none;
 
-      .ExternalLinkIcon {
-        vertical-align: text-bottom;
-      }
-    }
+    //   .ExternalLinkIcon {
+    //     vertical-align: text-bottom;
+    //   }
+    // }
 
     .Footer-Left {
       text-align: left;
@@ -607,6 +632,31 @@ export default Vue.extend({
         }
       }
     }
+
+    .Remarks {
+      margin-bottom: 10px;
+    }
+
+    // .SourceAndDate {
+    //   @include font-size(12);
+
+    //   color: $gray-3 !important;
+    //   width: 100%;
+    //   display: flex;
+    //   flex: 0 1 auto !important;
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    //   flex-direction: row-reverse;
+    //   .OpenDataLink {
+    //     // text-align: right;
+    //     white-space: normal;
+    //     font-size: 0.75rem;
+    //     text-decoration: none;
+    //     .ExternalLinkIcon {
+    //       vertical-align: text-bottom;
+    //     }
+    //   }
+    // }
   }
 
   .overlay {
