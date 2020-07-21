@@ -4,8 +4,10 @@
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
       :date="Data.inspections_summary.date"
+      :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
+      :remarks="remarks"
     >
-      <template v-slot:description>
+      <!-- <template v-slot:description>
         <ul>
           <li>
             {{
@@ -22,7 +24,7 @@
             }}
           </li>
         </ul>
-      </template>
+      </template> -->
       <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
         v-bind="confirmedCases"
@@ -51,10 +53,16 @@ export default {
       'YYYY/MM/DD HH:mm'
     )
 
+    const remarks = [
+      '熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載',
+      '検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります'
+    ]
+
     const data = {
       Data,
       confirmedCases,
-      updatedAt
+      updatedAt,
+      remarks
     }
     return data
   }

@@ -9,8 +9,8 @@
         :date="Data.patients.date"
         :info="sumInfoOfPatients"
         :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
-        :source="$t('オープンデータを入手')"
         :custom-sort="customSort"
+        :remarks="remarks"
       />
     </client-only>
   </v-col>
@@ -61,10 +61,13 @@ export default {
       }
     }
 
+    const remarks = ['死亡退院を含む']
+
     const data = {
       Data,
       patientsTable,
-      sumInfoOfPatients
+      sumInfoOfPatients,
+      remarks
     }
     return data
   },

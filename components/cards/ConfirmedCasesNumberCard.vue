@@ -13,6 +13,8 @@
       :date="Data.patients.date"
       :unit="$t('人')"
       :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
+      :remarks="remarks"
+    >
       <template v-slot:description>
         <ul>
           <li>
@@ -43,10 +45,14 @@ export default {
     // 感染者数グラフ
     // const patientsGraph = formatGraph(Data.patients_summary.data)
 
+    const remarks = [
+      '陽性者における日付は、公表日ではなく、検査により陽性が確定された日'
+    ]
+
     const data = {
-      Data
-      // ,
-      // patientsGraph
+      Data,
+      // patientsGraph,
+      remarks
     }
     return data
   }

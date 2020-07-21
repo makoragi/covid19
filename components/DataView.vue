@@ -82,13 +82,12 @@
               target="_blank"
               rel="noopener"
             >
-              出典: 熊本県オープンデータサイト{{ subtext }}
+              出典: 熊本県オープンデータサイト
               <v-icon class="ExternalLinkIcon" size="15">
                 mdi-open-in-new
               </v-icon>
             </a>
           </div>
-          <!-- <time :datetime="formattedDate">{{ date }} 更新</time> -->
           <div>
             <a class="Permalink" :href="permalink()">
               <time :datetime="formattedDate">
@@ -242,6 +241,7 @@ export default Vue.extend({
     },
     remarks: {
       type: Array,
+      required: false,
       default: () => []
     },
     url: {

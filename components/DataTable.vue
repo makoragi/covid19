@@ -1,5 +1,11 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date">
+  <data-view
+    :title="title"
+    :title-id="titleId"
+    :date="date"
+    :remarks="remarks"
+    url="url"
+  >
     <template v-slot:button>
       <span />
     </template>
@@ -27,16 +33,13 @@
         </tbody>
       </template>
     </v-data-table>
-    <div class="note">
+    <!-- <div class="note">
       <ul>
-        <!-- <li>
-          {{ $t('※退院は、保健所から報告があり、確認ができているものを反映') }}
-        </li> -->
         <li>
           {{ $t('※死亡退院を含む') }}
         </li>
       </ul>
-    </div>
+    </div> -->
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="info.lText"
@@ -164,6 +167,10 @@ export default Vue.extend({
         })
         return items
       }
+    },
+    remarks: {
+      type: Array,
+      default: () => []
     }
   },
   mounted() {
