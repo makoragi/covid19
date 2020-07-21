@@ -1,5 +1,11 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :date="date">
+  <data-view
+    :title="title"
+    :title-id="titleId"
+    :date="date"
+    :url="url"
+    :remarks="remarks"
+  >
     <template v-slot:description>
       <slot name="description" />
     </template>
@@ -69,9 +75,9 @@
         :unit="displayInfo.unit"
       />
     </template>
-    <template v-slot:footer>
+    <!-- <template v-slot:footer>
       <open-data-link v-show="url" :url="url" />
-    </template>
+    </template> -->
   </data-view>
 </template>
 
@@ -132,6 +138,7 @@ type Props = {
   url: string
   scrollPlugin: Chart.PluginServiceRegistrationOptions[]
   yAxesBgPlugin: Chart.PluginServiceRegistrationOptions[]
+  remarks: String[]
 }
 
 const options: ThisTypedComponentOptionsWithRecordProps<
@@ -185,6 +192,9 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     yAxesBgPlugin: {
       type: Array,
       default: () => yAxesBgPlugin
+    },
+    remarks: {
+      type: Array
     }
   },
   data: () => ({
