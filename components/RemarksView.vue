@@ -2,7 +2,7 @@
   <v-expansion-panels v-model="expands" :flat="true" :accordion="false">
     <v-expansion-panel class="remarks_panel">
       <v-expansion-panel-header :hide-actions="true">
-        注記
+        {{ $t('注記') }}
         <span>
           <v-icon v-if="expands != '0'" size="20">
             $expand

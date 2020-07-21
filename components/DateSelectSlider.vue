@@ -2,7 +2,7 @@
   <v-range-slider
     v-model="sliderValue"
     :value="sliderValue"
-    :label="'表示期間'"
+    :label="$t('表示期間')"
     :min="min"
     :max="max"
     thumb-label="always"
