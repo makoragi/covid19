@@ -61,7 +61,7 @@ export default {
       }
     }
 
-    const remarks = ['死亡退院を含む']
+    const remarks = [ this.$t('死亡退院を含む') ]
 
     const data = {
       Data,

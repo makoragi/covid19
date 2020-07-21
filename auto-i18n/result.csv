@@ -178,3 +178,32 @@ TAG_ADD,
 TAG_REMOVE,
 RUN,2020/07/16 22:26
 TAG_ADD,
+RUN,2020/07/21 23:05
+TAG_ADD,
+TAG_REMOVE,※退院は、保健所から報告があり、確認ができているものを反映
+TAG_REMOVE,
+RUN,2020/07/21 23:18
+TAG_ADD,
+TAG_ADD,出典: 熊本県オープンデータサイト
+RUN,2020/07/21 23:20
+TAG_ADD,
+TAG_ADD,注記
+TAG_ADD,表示期間
+TAG_REMOVE,
+RUN,2020/07/21 23:24
+TAG_ADD,
+RUN,2020/07/21 23:30
+TAG_ADD,
+TAG_ADD,陽性者累計数
+TAG_ADD,過去7日間の平均
+TAG_REMOVE,
+RUN,2020/07/21 23:39
+TAG_ADD,
+TAG_ADD,熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載
+TAG_ADD,（注）陽性者における日付は、公表日ではなく、検査により陽性が確定された日
+TAG_ADD,※死亡退院を含む
+RUN,2020/07/21 23:41
+TAG_ADD,
+TAG_ADD,速報値として公開するものであり、後日確定データとして修正される場合あり
+TAG_ADD,同一の対象者について複数の検体を検査する場合あり
+TAG_REMOVE,
