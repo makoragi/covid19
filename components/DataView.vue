@@ -73,6 +73,21 @@
           </div>
 -->
           <slot name="footer" />
+          <remarks-view class="Remarks" :remarks="remarks" />
+          <div class="SourceAndDate">
+            <a
+              v-if="url"
+              class="OpenDataLink"
+              :href="url"
+              target="_blank"
+              rel="noopener"
+            >
+              出典: 熊本県オープンデータサイト
+              <v-icon class="ExternalLinkIcon" size="15">
+                mdi-open-in-new
+              </v-icon>
+            </a>
+          </div>
           <div>
             <a class="Permalink" :href="permalink()">
               <time :datetime="formattedDate">
@@ -203,8 +218,10 @@
 import Vue from 'vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 import { EventBus, TOGGLE_EVENT } from '@/utils/card-event-bus'
+import RemarksView from '@/components/RemarksView.vue'
 
 export default Vue.extend({
+  components: { RemarksView },
   props: {
     title: {
       type: String,
@@ -222,6 +239,15 @@ export default Vue.extend({
       type: Boolean,
       required: false,
       default: false
+    },
+    remarks: {
+      type: Array,
+      required: false,
+      default: () => []
+    },
+    url: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -606,6 +632,10 @@ export default Vue.extend({
           }
         }
       }
+    }
+
+    .Remarks {
+      margin-bottom: 10px;
     }
   }
 
