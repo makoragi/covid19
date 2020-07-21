@@ -96,7 +96,6 @@
             </a>
           </div>
         </div>
-
         <div v-if="this.$route.query.embed != 'true'" class="Footer-Right">
           <v-tooltip left nudge-right="20" nudge-bottom="4">
             <template v-slot:activator="{ on }">
@@ -505,13 +504,13 @@ export default Vue.extend({
       color: $gray-3 !important;
     }
 
-    .OpenDataLink {
-      text-decoration: none;
+    // .OpenDataLink {
+    //   text-decoration: none;
 
-      .ExternalLinkIcon {
-        vertical-align: text-bottom;
-      }
-    }
+    //   .ExternalLinkIcon {
+    //     vertical-align: text-bottom;
+    //   }
+    // }
 
     .Footer-Left {
       text-align: left;
@@ -637,6 +636,27 @@ export default Vue.extend({
     .Remarks {
       margin-bottom: 10px;
     }
+
+    // .SourceAndDate {
+    //   @include font-size(12);
+
+    //   color: $gray-3 !important;
+    //   width: 100%;
+    //   display: flex;
+    //   flex: 0 1 auto !important;
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    //   flex-direction: row-reverse;
+    //   .OpenDataLink {
+    //     // text-align: right;
+    //     white-space: normal;
+    //     font-size: 0.75rem;
+    //     text-decoration: none;
+    //     .ExternalLinkIcon {
+    //       vertical-align: text-bottom;
+    //     }
+    //   }
+    // }
   }
 
   .overlay {
