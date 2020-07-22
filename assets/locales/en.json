@@ -471,7 +471,7 @@
   "熊本市検査分": "Tested by Kumamoto City",
   "【県】知事からのメッセージ": "【県】知事からのメッセージ",
   "当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、熊本県有志が開設したものです。": "This site was developed by the Kumamoto Prefecture in order to provide the latest information on COVID-19.",
-  "熊本市北区": "熊本市北区",
+  "熊本市北区": "Kita-ku, Kumamoto City",
   "Code for Kumamoto": "Code for Kumamoto",
   "当サイトに掲載されている情報の正確性については万全を期していますが、熊本県およびサイト制作者は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。": "Although every effort has been made to ensure the accuracy of the information posted on this site, Kumamoto Prefecture is not responsible for any actions taken by users using the information on this site.",
   "県(熊本市以外)": "Pref. (excl. Kumamoto City)",
@@ -487,5 +487,8 @@
   "表示期間": "Display period",
   "陽性者累計数": "Total number of people testing positive",
   "過去7日間の平均": "Average for the 7 days",
-  "過去7日間の平均は、新規感染者数の後方7日移動平均値です": "The average for the past 7 days is the backward 7-day moving average of new infections"
+  "過去7日間の平均は、新規感染者数の後方7日移動平均値です": "The average for the past 7 days is the backward 7-day moving average of new infections",
+  "神奈川県": "Kanagawa Pref.",
+  "累計相談件数": "Total number of inquiries",
+  "相談件数": "Number of inquiries"
 }

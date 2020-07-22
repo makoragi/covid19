@@ -3,6 +3,11 @@ export type PatientsSummaryDaily = {
   小計: number
 }
 
+export type ContactsSummaryDaily = {
+  日付: string
+  小計: number
+}
+
 export type PatientsSummaryWeekly = {
   開始日: string
   終了日: string
