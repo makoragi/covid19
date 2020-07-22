@@ -15,7 +15,7 @@ const config: Configuration = {
     htmlAttrs: {
       prefix: 'og: http://ogp.me/ns#'
     },
-    titleTemplate: '%s | 熊本県新型コロナウイルス感染症対策サイト(dev)',
+    titleTemplate: '%s | 熊本県新型コロナウイルス感染症対策サイト',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,18 +28,18 @@ const config: Configuration = {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '熊本県新型コロナウイルス感染症対策サイト(dev)'
+        content: '熊本県新型コロナウイルス感染症対策サイト'
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://dev-covid19-kumamoto.netlify.com/'
+        content: 'https://kumamoto.stopcovid19.jp/'
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: '熊本県新型コロナウイルス感染症対策サイト(dev)'
+        content: '熊本県新型コロナウイルス感染症対策サイト'
       },
       {
         hid: 'og:description',
@@ -50,7 +50,7 @@ const config: Configuration = {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://dev-covid19-kumamoto.netlify.com/ogp.png'
+        content: 'https://kumamoto.stopcovid19.jp/ogp.png'
       },
       {
         hid: 'twitter:card',
@@ -60,7 +60,7 @@ const config: Configuration = {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://dev-covid19-kumamoto.netlify.com/ogp.png'
+        content: 'https://kumamoto.stopcovid19.jp/ogp.png'
       },
       {
         hid: 'fb:app_id',
