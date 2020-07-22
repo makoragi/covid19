@@ -488,5 +488,7 @@
   "陽性者累計数": "Total number of people testing positive",
   "過去7日間の平均": "Average for the 7 days",
   "過去7日間の平均は、新規感染者数の後方7日移動平均値です": "The average for the past 7 days is the backward 7-day moving average of new infections",
-  "神奈川県": "Kanagawa Pref."
+  "神奈川県": "Kanagawa Pref.",
+  "累計相談件数": "Total number of inquiries",
+  "相談件数": "Number of inquiries"
 }
