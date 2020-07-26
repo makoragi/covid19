@@ -490,5 +490,6 @@
   "過去7日間の平均は、新規感染者数の後方7日移動平均値です": "The average for the past 7 days is the backward 7-day moving average of new infections",
   "神奈川県": "Kanagawa Pref.",
   "累計相談件数": "Total number of inquiries",
-  "相談件数": "Number of inquiries"
+  "相談件数": "Number of inquiries",
+  "陽性者数は件数であり、同一人物に複数回の感染がある場合、別としてカウントする": "The number of positive patients is the number of cases. If the same person is infected multiple times, count each time."
 }
