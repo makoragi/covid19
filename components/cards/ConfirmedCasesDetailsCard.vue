@@ -3,7 +3,7 @@
     <data-view
       :title="$t('検査陽性者の状況')"
       :title-id="'details-of-confirmed-cases'"
-      :date="Data.inspections_summary.date"
+      :date="Data.patients.date"
       :url="'https://www.pref.kumamoto.jp/kiji_22038.html'"
       :remarks="remarks"
     >
@@ -54,8 +54,12 @@ export default {
     )
 
     const remarks = [
-      this.$t('熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載'),
-      this.$t('検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります')
+      this.$t(
+        '熊本県内において疑い例または患者の濃厚接触者として検査を行ったものについて掲載'
+      ),
+      this.$t(
+        '検査実施人数は、速報値として公開するものであり、後日確定データとして修正される場合があります'
+      )
     ]
 
     const data = {
