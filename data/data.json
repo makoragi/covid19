@@ -5328,11 +5328,11 @@
                 "children": [
                     {
                         "attr": "入院中",
-                        "value": 134,
+                        "value": 139,
                         "children": [
                             {
                                 "attr": "無症状・軽症・中等症",
-                                "value": 133
+                                "value": 138
                             },
                             {
                                 "attr": "重症",
@@ -5350,7 +5350,7 @@
                     },
                     {
                         "attr": "退院",
-                        "value": 87
+                        "value": 82
                     },
                     {
                         "attr": "死亡",
